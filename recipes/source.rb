@@ -24,10 +24,10 @@ include_recipe 'build-essential'
 include_recipe 'xml'
 include_recipe 'yum-epel' if node['platform_family'] == 'rhel'
 
-mysql_client 'default' do
-  action :create
-  only_if { configure_options =~ /mysql/ }
-end
+# mysql_client 'default' do
+#   action :create
+#   only_if { configure_options =~ /mysql/ }
+# end
 
 package node['php']['src_deps']
 
